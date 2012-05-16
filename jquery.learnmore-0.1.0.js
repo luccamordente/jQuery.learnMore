@@ -34,9 +34,9 @@
       
       
       // instance of current element or set of elements
-      $element = element,
-      $action  = element.find(".learn-more"),
-      $content = element.find(".learn-more-content"),
+      $element = $(element),
+      $action  = $element.find(".learn-more"),
+      $content = $element.find(".learn-more-content"),
       
       
       compactAction = null,
@@ -79,7 +79,7 @@
       compactAction = $action.text();
       
       // bind event to element
-      $action.bind('click.escfield',click);
+      $action.bind('click.learnmore',click);
       
       // hides the learn more content
       $content.hide();
@@ -87,8 +87,9 @@
     
     };
     
-    
-    plugin(this, options);
+    $(this).each(function(i,e){
+      plugin(e, options);
+    });
     
     return this;
     
