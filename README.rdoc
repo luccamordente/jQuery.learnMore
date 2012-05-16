@@ -1,0 +1,56 @@
+= jQuery.learnMore
+
+jQuery plugin that makes easy to add "learn more" functionality for any content.
+
+== Usage
+
+Adds learn more to any element with attribute rel="learn-more".
+
+  $(function(){
+    $('[rel="learn-more"]').learnMore();
+  });
+
+and
+
+  <div rel="learn-more">
+    <div>Announcement summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement description.
+    </div>
+  </div>
+  
+The element with <tt>class="learn-more"</tt> is used as trigger to show the element with <tt>class="learn-more-content"</tt>.
+
+=== Specific installation
+
+If you need specific behavior for each announcement, you can use as follows:
+
+  $(function(){
+    $('#announcement1').learnMore();
+    $('#announcement2').learnMore({hideExpanded: true});
+  });
+
+and
+
+  <div id="announcement1">
+    <div>Announcement 1 summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement 1 description.
+    </div>
+  </div>
+  <div id="announcement2">
+    <div>Announcement 2 summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement 2 description.
+    </div>
+  </div>
+
+== Options
+
+[hideExpanded (boolean)]
+  default: *false*
+  
+  Hides the "learn-more" element when clicked.
+
+[expandedAction (string)]
+  Text for the "learn-more" element when content is expanded.

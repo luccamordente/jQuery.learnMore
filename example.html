@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>untitled</title>
+  <meta name="generator" content="TextMate http://macromates.com/">
+  <meta name="author" content="Lucca Mordente">
+  <!-- Date: 2012-03-03 -->
+  <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.learnmore-0.1.0.js"></script>
+  <script type="text/javascript" charset="utf-8">
+   $(function(){
+     
+     $('#announcement').learnMore({
+       hideExpanded: true
+     });
+     $('#announcement2').learnMore({
+       expandedAction: "Learn less"
+     });
+     
+     $('[rel=learn-more]').learnMore();
+     
+   });
+  </script>
+</head>
+<body>
+  
+  <div id="announcement">
+    <div>Announcement summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement description.
+    </div>
+  </div>
+  
+  <br /><br /><br />
+  
+  <div id="announcement2">
+    <div>Announcement summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement description.
+    </div>
+  </div>
+  
+  <br /><br /><br />
+  
+  <div rel="learn-more">
+    <div>Announcement summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement description.
+    </div>
+  </div>
+  
+  <br /><br /><br />
+  
+  <div rel="learn-more">
+    <div>Announcement summary. <a href="javascript:void(0);" class="learn-more">Learn more</a></div>
+    <div class="learn-more-content">
+      This is the announcement description.
+    </div>
+  </div>
+
+</body>
+</html>
