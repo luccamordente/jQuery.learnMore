@@ -55,21 +55,28 @@
       }, //click
       
       toggle = function(event) {
-        if(state == "hidden") {
-          $content.show();
-          state = "visible";
-          if(settings.hideExpanded)
-            $action.hide();
-          if(settings.expandedAction)
-            $action.html(settings.expandedAction);
-        } else
-        if(state == "visible") {
-          $content.hide();
-          state = "hidden";
-          if(settings.expandedAction)
-            $action.html(compactAction);
-        }
+        if(state == "hidden")
+          show();
+        else if(state == "visible")
+          hide();
+      }, //toggle
+      
+      show = function() {
+        $content.show();
+        state = "visible";
+        if(settings.hideExpanded)
+          $action.hide();
+        if(settings.expandedAction)
+          $action.html(settings.expandedAction);
+      }, //show
+      
+      hide = function() {
+        $content.hide();
+        state = "hidden";
+        if(settings.expandedAction)
+          $action.html(compactAction);
       }
+      
       
       ;
       
